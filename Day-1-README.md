@@ -318,12 +318,13 @@ Stores copies of static content (images, videos) on nearby servers to reduce lat
 Example: Like a local shop holding popular items so customers do not travel far to the main warehouse.
 
 ```mermaid
-graph TD;
-    A[User in India] -->|Request| B[CDN Server (Nearby)];
-    B -->|Return Cached Content| A;
-    B -->|If miss| C[Origin Server (London)];
-    C -->|Send Content| B;
+graph TD
+    User[User in India] -->|Request| CDN[CDN Server (Nearby)]
+    CDN -->|Return Cached Content| User
+    CDN -->|If miss| Origin[Origin Server (London)]
+    Origin -->|Send Content| CDN
 ```
+
 ## 26. Cache
 Fast memory for frequently accessed data, 50-100x faster than DB.
 
