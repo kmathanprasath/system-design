@@ -319,9 +319,9 @@ Example: Like a local shop holding popular items so customers do not travel far 
 
 ```mermaid
 graph TD
-    User[User in India] -->|Request| CDN[CDN Server (Nearby)]
+    User["User in India"] -->|Request| CDN["CDN Server Nearby"]
     CDN -->|Return Cached Content| User
-    CDN -->|If miss| Origin[Origin Server (London)]
+    CDN -->|If miss| Origin["Origin Server London"]
     Origin -->|Send Content| CDN
 ```
 
